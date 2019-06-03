@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'watch.apps.WatchConfig',
-    'bootstrap4'
+    'bootstrap4',
+    'tinymce'
 ]
 
 MIDDLEWARE = [
