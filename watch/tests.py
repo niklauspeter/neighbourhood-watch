@@ -1,3 +1,3 @@
 from django.test import TestCase
-from .models import Neighbourhood
+from .models import neighbourhood
 # Create your tests here.
