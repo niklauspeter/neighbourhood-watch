@@ -1,6 +1,4 @@
 from django.contrib import admin
-
-# Register your models here.
 from .models import neighbourhood,healthservices,notifications,Business,Health,Authorities,BlogPost,Profile
 
 
