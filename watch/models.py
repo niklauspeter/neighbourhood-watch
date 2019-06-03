@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User 
 from tinymce.models import HTMLField
-
+import datetime as dt
 
 Priority=(
     ('Informational','Informational'),
@@ -19,7 +19,7 @@ class neighbourhood(models.Model):
     location= models.CharField(max_length=100)
     occupant_count= models.CharField(max_length=100)
     user= models.ForeignKey(User, max_length=100)
-    tags = models.ManyToManyField(tags)
+    
     pub_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
