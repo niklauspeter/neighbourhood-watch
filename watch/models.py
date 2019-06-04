@@ -119,7 +119,7 @@ class BlogPost(models.Model):
 
     @classmethod
     def search_blogpost(cls,search_term):
-        blogs = cls.objects.filter(Q(username__username=search_term) | Q(neighbourhood__neighbourhood=search_term) | Q(title__icontains=search_term))
+        blogs = cls.objects.filter(title__icontains=search_term)
         return blogs
 
 
