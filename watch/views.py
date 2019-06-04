@@ -21,10 +21,11 @@ def index(request):
             return redirect('/accounts/login/')
         current_user=request.user
         profile =Profile.objects.get(username=current_user)
+        
     except ObjectDoesNotExist:
         return redirect('create-profile')
 
-    return render(request,'index.html')
+    return render(request,'index.html',{"profile":profile})
 
 @login_required(login_url='/accounts/login/')
 def notification(request):
