@@ -3,10 +3,7 @@ from django.contrib.auth.models import User
 from tinymce.models import HTMLField
 import datetime as dt
 
-Priority=(
-    ('Informational','Informational'),
-    ('High Priority','High Priority'),
-)
+
 # Create your models here.
 class tags(models.Model):
     name = models.CharField(max_length =30)
@@ -35,7 +32,6 @@ class neighbourhood(models.Model):
 class notifications(models.Model):
     title = models.CharField(max_length=100)
     notification = HTMLField()
-    priority = models.CharField(max_length=15,choices=Priority,default="Informational")
     author = models.ForeignKey(User,on_delete=models.CASCADE)
     neighbourhood = models.ForeignKey(neighbourhood,on_delete=models.CASCADE)
     post_date = models.DateTimeField(auto_now_add=True)
